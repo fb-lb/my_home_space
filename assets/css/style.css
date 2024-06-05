@@ -102,7 +102,6 @@ span {
 
 main div {
     display: flex;
-    flex-direction: row;
     justify-content:center;
     column-gap: 30px;
 }
@@ -111,8 +110,7 @@ main div {
     display: flex;
     flex-direction: column;
     flex-basis: 30%;
-    height: 530px;
-    position: relative;
+    height: 570px;
     margin-top: 20px;
     background-color: #645955;
 }
@@ -134,17 +132,15 @@ main div {
 }
 
 .post__link {
-    clip-path: polygon(100% 0%, 100% 100%, 0% 100%);
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    display: flex;
+    clip-path: polygon(150% -50%, 150% 150%, -50% 150%);
+    height: 64px;
+    width: 64px;
+    margin-left: auto;
+    margin-top:auto;
 }
 
 .post__link:hover {
-    bottom: -5px;
-    right: -5px;
-    border: 5px solid  #662F32;
+    box-shadow: 0px 0px 0px 5px #662F32;
 }
 
 .info-post {
@@ -198,54 +194,49 @@ footer {
     padding: 50px 20px 15px 15px;
     display: flex;
     justify-content: space-between;
-    position: relative;
 }
 
-small {
+footer small {
     align-self: end;
 }
 
 footer div {
     display: flex;
+    gap: 5px;
 }
 
 footer div a {
     width: 32px;
     height: 32px;
     overflow: hidden;
-    z-index: 1;
 }
 
 footer div a img {
     height: 32px;
     width: 96px;
     object-fit: cover;
-    opacity: 0%;
 }
 
 .icons__facebook {
+    object-position:top;
+}
+
+.icons__facebook:hover {
     object-position:bottom;
 }
 
-
 .icons__twitter {
+    object-position:top 0 left -32px;
+}
+
+.icons__twitter:hover {
     object-position:bottom 0 left -32px;
 }
 
 .icons__google {
+    object-position:top 0 left -64px;
+}
+
+.icons__google:hover {
     object-position:bottom 0 left -64px;
-}
-
-div > a img:hover {
-    opacity: 100%;
-}
-
-footer>img {
-    height: 32px;
-    width: 96px;
-    object-fit: cover;
-    object-position:top;
-    position: absolute;
-    bottom: 15px;
-    right: 20px;
 }
